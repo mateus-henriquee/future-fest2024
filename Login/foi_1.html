@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de Carregamento</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #4b4848;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+
+        .loader {
+            font-size: 24px;
+            color: #ffffff;
+        }
+
+        .dots {
+            display: inline-block;
+            font-size: 24px;
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+
+            0%,
+            20% {
+                opacity: 1;
+            }
+
+            30%,
+            50% {
+                opacity: 0;
+            }
+
+            60%,
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .dot {
+            animation: blink 1s infinite;
+            display: inline-block;
+        }
+
+        .dot:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        .dot:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .dot:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+    </style>
+    <script>
+        setTimeout(() => {
+            window.location.href = '/'; // Redireciona após 2 segundos
+        }, 2000);
+    </script>
+</head>
+
+<body>
+    <div class="loader">Login Realizado Com Sucesso! Carregando
+        <span class="dots">
+            <span class="dot">.</span>
+            <span class="dot">.</span>
+            <span class="dot">.</span>
+        </span>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de Usuário</title>
+    <link rel="stylesheet" href="/Login/pagina.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <strong>
+                <h3>inovA</h3>
+            </strong>
+        </div>
+        <nav>
+
+            <ul class="nav-links">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#services">Serviços</a></li>
+                <li><a href="#contact">Contatos</a></li>
+
+                <div class="menu-container">
+                    <li onclick="toggleMenu()" class="hamburger"><svg xmlns="http://www.w3.org/2000/svg" width="25"
+                            height="25" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
+                            <path fill-rule="evenodd"
+                                d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
+                        </svg></li>
+
+                    <nav class="menu" id="menu">
+                        <ul>
+                            <li><a href="/pagina" id="textos">Account</a></li>
+                            <li><a href="#" id="textos">Meus Cursos</a></li>
+                            <li><a href="#" id="textos">Configurações</a></li>
+                            <li class="delete-account"><a href="/sair" style="color: red;">Sair da Conta</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </ul>
+        </nav>
+    </header>
+
+
+
+
+    <div class="container">
+        <div class="perfil">
+            <div class="foto-perfil" onclick="document.getElementById('fileInput').click();">
+                <img id="fotoPerfil" src="perfil.jpg" alt="Foto de Perfil">
+            </div>
+
+            <input type="file" id="fileInput" style="display: none;" onchange="trocarFoto()">
+
+
+            <div class="info-usuario">
+                <h2 class="title">Bem-vindo, <span class="nome" id="nomeUsuario"></span></h2>
+                <p><span class="nome" id="email"></span></p>
+            </div>
+        </div>
+
+        <div class="dashboard">
+            <h2>Dashboard de Cursos</h2>
+            <div class="grafico">
+                <canvas id="graficoCursos" width="400" height="200"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/Login/script.js"></script>
+    <script src="/script.js"></script>
+</body>
+
+</html>

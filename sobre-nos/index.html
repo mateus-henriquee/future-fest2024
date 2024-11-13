@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nós</title>
+    <style>
+        /* RESET CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1,
+        h2,
+        h3 {
+            text-align: center;
+            margin: 20px 0;
+            color: #333;
+        }
+
+        section {
+            padding: 40px 10%;
+            opacity: 0;
+            /* Inicialmente invisível para animação */
+            transform: translateY(50px);
+            /* Inicialmente abaixo */
+            transition: opacity 1s ease, transform 1s ease;
+            /* Transição suave */
+        }
+
+        section.show {
+            opacity: 1;
+            /* Quando aparecer, será visível */
+            transform: translateY(0);
+            /* Animação de subir */
+        }
+
+        /* Estilo de imagens */
+        img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            /* Tornar as imagens redondas */
+            margin-bottom: 15px;
+            object-fit: cover;
+        }
+
+        /* Header */
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            letter-spacing: 1px;
+            color: #fff;
+        }
+
+        header nav {
+            margin-top: 15px;
+        }
+
+        header nav a {
+            margin: 0 15px;
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        header nav a:hover {
+            color: #38a6ea;
+        }
+
+        /* Sessão Nossa Missão */
+        .missao {
+            background-color: #e2e2e2;
+            padding: 50px 10%;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .missao video {
+            width: 70%;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+
+        .missao p {
+            font-size: 1.2em;
+            color: #555;
+        }
+
+        /* Sessão Nossa História */
+        .historia {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 50px 10%;
+            background-color: #fff;
+            border-radius: 10px;
+        }
+
+        .historia .texto {
+            width: 48%;
+            font-size: 1.2em;
+        }
+
+        .historia video {
+            width: 48%;
+            border-radius: 8px;
+        }
+
+        /* Sessão Quem Somos */
+        .quem-somos {
+            background-color: #fff;
+            padding: 50px 10%;
+            border-radius: 10px;
+        }
+
+        .colaborador {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+            opacity: 0;
+            /* Inicialmente invisível para animação */
+            transform: translateY(50px);
+            /* Inicialmente abaixo */
+            transition: opacity 1s ease, transform 1s ease;
+            /* Transição suave */
+        }
+
+        .colaborador.show {
+            opacity: 1;
+            /* Quando aparecer, será visível */
+            transform: translateY(0);
+            /* Animação de subir */
+        }
+
+        .colaborador .foto {
+            width: 45%;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+        .foto img {
+            height: 50%;
+            width: 70%;
+        }
+
+        .colaborador .informacoes {
+            width: 65%;
+        }
+
+        .colaborador .informacoes h3 {
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+
+        .colaborador .informacoes p {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        .colaborador .redes-sociais {
+            display: flex;
+            gap: 10px;
+        }
+
+        .colaborador .redes-sociais a {
+            font-size: 1.5em;
+            color: #333;
+            text-decoration: none;
+        }
+
+        .colaborador .redes-sociais a:hover {
+            color: #f39c12;
+        }
+
+        /* Estilos para a responsividade */
+        @media (max-width: 768px) {
+            .historia {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .historia .texto,
+            .historia video {
+                width: 100%;
+                margin: 10px 0;
+            }
+
+            .colaborador {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .colaborador .foto {
+                width: 50%;
+                margin: 0 auto;
+            }
+
+            .colaborador .informacoes {
+                width: 100%;
+            }
+        }
+
+        #squad-img {
+            margin-top: 5%;
+            border-radius: 8px;
+            width: 50%;
+            height: 25%;
+        }
+
+        #squad-img:hover {
+            transition: all 1s;
+            transform: scale(1.05);
+        }
+
+        #titulo-squad {
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Sobre Nós</h1>
+        <nav>
+            <a href="#missao">Nossa Missão</a>
+            <a href="#historia">Nossa História</a>
+            <a href="#quemsomos">Quem Somos</a>
+        </nav>
+    </header>
+
+    <section id="missao" class="missao">
+        <h2>Nossa Missão</h2>
+        <video controls>
+            <source src="video_missao.mp4" type="video/mp4">
+            Seu navegador não suporta a tag de vídeo.
+        </video>
+        <p>Nosso objetivo é desenvolver futuros developers, proporcionando o melhor aprendizado em tecnologia para
+            transformar vidas e criar oportunidades no mercado de trabalho.</p>
+    </section>
+
+    <section id="historia" class="historia">
+        <div class="texto">
+            <h2>Nossa História</h2>
+            <p>Começamos como uma pequena startup com a missão de democratizar o acesso ao conhecimento em tecnologia.
+                Superamos muitos desafios e hoje somos uma referência no ensino de programação e desenvolvimento de
+                carreira no mundo da tecnologia.</p>
+        </div>
+        <video controls>
+            <source src="video_historia.mp4" type="video/mp4">
+            Seu navegador não suporta a tag de vídeo.
+        </video>
+    </section>
+
+    <section id="quemsomos" class="quem-somos">
+        <h2>Quem Somos</h2>
+
+        <!-- Colaborador 1 -->
+        <div class="colaborador">
+            <div class="foto">
+                <img src="/sobre-nos/team/scrum.jpg" alt="Colaborador 1">
+            </div>
+            <div class="informacoes">
+                <h3>Mateus Henrique (CEO - Scrum)</h3>
+                <p>Um jovem apaixonado por tecnologia, Mateus atualmente, estuda
+                    Python com o objetivo de seguir carreira na área de dados e criar sua propria empresa. Fora do mundo
+                    da programação, Mateus
+                    adora
+                    tocar piano, jogar basquete com os amigos e ler livros, sempre buscando equilibrar suas paixões com
+                    o aprendizado.</p>
+                <div class="redes-sociais">
+                    <a href="https://github.com" target="_blank">🐱</a>
+                    <a href="https://instagram.com" target="_blank">📸</a>
+                    <a href="https://twitter.com" target="_blank">🐦</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Colaborador 2 -->
+        <div class="colaborador">
+            <div class="foto">
+                <img src="/sobre-nos/team/diogo.jpg" alt="Colaborador 2">
+            </div>
+            <div class="informacoes">
+                <h3>Diogo Toledo (Back-End Developer)</h3>
+                <p>Diogo, de 17 anos, é um jovem apaixonado por programação e está no segundo ano do ensino médio
+                    técnico em Informática. Com o objetivo de seguir carreira como desenvolvedor de back-end, ele se
+                    dedica a aprimorar suas habilidades técnicas. Quando não está codificando, Diogo adora sair e se
+                    divertir com seus amigos, equilibrando o trabalho e o lazer de forma leve e descontraída.</p>
+                <div class="redes-sociais">
+                    <a href="https://github.com" target="_blank">🐱</a>
+                    <a href="https://instagram.com" target="_blank">📸</a>
+                    <a href="https://twitter.com" target="_blank">🐦</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Colaborador 3 -->
+        <div class="colaborador">
+            <div class="foto">
+                <img src="/sobre-nos/team/isaac.jpg" alt="Colaborador 3">
+            </div>
+            <div class="informacoes">
+                <h3>Isaac Pongeli (Idealizador De Projetos)</h3>
+                <p>Isaac, de 17 anos, é um jovem entusiasta da tecnologia, sempre em busca de aprender mais sobre o
+                    mundo digital. No segundo ano do ensino médio técnico em Informática, ele está decidido a seguir
+                    carreira na programação, embora ainda esteja explorando qual área se aprofundar. Fora dos estudos,
+                    Isaac adora passar o tempo assistindo filmes e jogando eletrônicos com seus amigos, equilibrando
+                    diversão e aprendizado enquanto define seu caminho no universo da tecnologia.</p>
+                <div class="redes-sociais">
+                    <a href="https://github.com" target="_blank">🐱</a>
+                    <a href="https://instagram.com" target="_blank">📸</a>
+                    <a href="https://twitter.com" target="_blank">🐦</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Colaborador 4 -->
+        <div class="colaborador">
+            <div class="foto">
+                <img src="/sobre-nos/team/rian.jpg" alt="Colaborador 4">
+            </div>
+            <div class="informacoes">
+                <h3>Rian Brandão (Idealizador De Projetos)</h3>
+                <p>Um jovem apaixonado por esportes e tecnologia. No segundo ano do ensino médio
+                    técnico em Informática, ele sonha em seguir carreira na área de Engenharia da Computação. Fora dos
+                    estudos, Rian adora jogar handebol profissionalmente e se divertir com seus amigos em jogos
+                    eletrônicos. Com uma mente
+                    curiosa e cheia de energia, ele busca equilibrar seu amor pelos esportes com o interesse crescente
+                    pela tecnologia.</p>
+                <div class="redes-sociais">
+                    <a href="https://github.com" target="_blank">🐱</a>
+                    <a href="https://instagram.com" target="_blank">📸</a>
+                    <a href="https://twitter.com" target="_blank">🐦</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="historia" class="historia">
+        <div class="texto">
+            <h2 id="titulo-squad">Nosso Squad</h2>
+            <p>Com uma equipe diversificada e cheia de talento, cada integrante traz uma perspectiva única e habilidades
+                complementares para alcançar os objetivos comuns. Juntos, estão prontos para enfrentar desafios,
+                aprender continuamente e inovar, construindo um futuro promissor com muita dedicação e trabalho em
+                equipe..</p>
+        </div>
+        <img src="/sobre-nos/team/squad.jpg" id="squad-img">
+    </section>
+
+    <script>
+        // Função para adicionar a classe de animação "show" quando o elemento estiver na tela
+        const sections = document.querySelectorAll('section, .colaborador');
+
+        function checkVisibility() {
+            const windowHeight = window.innerHeight;
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+                if (sectionTop < windowHeight - 100 && sectionTop > -100) { // Detecta a entrada na área visível da tela
+                    section.classList.add('show');
+                }
+            });
+        }
+
+        // Chama a função no carregamento da página e ao rolar
+        window.addEventListener('scroll', checkVisibility);
+        window.addEventListener('load', checkVisibility);
+    </script>
+
+</body>
+
+</html>

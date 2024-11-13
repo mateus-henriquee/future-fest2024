@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Site modificação</title>
+
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <strong>
+                <h3>inovA</h3>
+            </strong>
+        </div>
+        <nav>
+
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#services">Serviços</a></li>
+                <li><a href="#contact">Contatos</a></li>
+
+                <div class="menu-container">
+                    <li onclick="toggleMenu()" class="hamburger"><svg xmlns="http://www.w3.org/2000/svg" width="25"
+                            height="25" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
+                            <path fill-rule="evenodd"
+                                d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
+                        </svg></li>
+
+                    <nav class="menu" id="menu">
+                        <ul>
+                            <li><a href="/pagina" id="textos">Account</a></li>
+                            <li><a href="#" id="textos">Meus Cursos</a></li>
+                            <li><a href="#" id="textos">Configurações</a></li>
+                            <li class="delete-account"><a href="/sair" style="color: red;">Sair da Conta</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </ul>
+        </nav>
+    </header>
+
+
+    <div class="section">
+        <div class="esquerda-home">
+            <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.29/build/spline-viewer.js"></script>
+            <spline-viewer url="https://prod.spline.design/4WqxFtIkAPcrD-oF/scene.splinecode"></spline-viewer>
+        </div>
+
+        <div class="direita-home">
+            <div class="typing-container">
+                <h1 id="text" style="color: #007BFF;"></h1>
+                <span class="cursor" id="cursor"></span>
+            </div>
+
+            <p>Na <strong style="color: #0d6efd;"> inovA</strong>, nossa missão é democratizar
+                o aprendizado em tecnologia, oferecendo cursos online de alta qualidade que atendem a todos os níveis de
+                conhecimento. Com um time de especialistas apaixonados pelo que fazem, proporcionamos uma experiência de
+                aprendizado interativa e prática, que capacita nossos alunos a dominar habilidades essenciais para o
+                futuro.</p>
+        </div>
+    </div>
+
+    <section id="about" class="about-section">
+        <div class="esquerda">
+            <h2>Sobre Nós</h2>
+            <p>Fundada com a missão de simplificar a vida das pessoas e impulsionar o avanço tecnológico, a inovA
+                oferece soluções avançadas em inteligência artificial, computação em nuvem e desenvolvimento de
+                software. A inovA é uma empresa de tecnologia inovadora que se destaca por seu compromisso com a
+                transformação digital.
+            </p>
+            <a href="/sobre-nos/index.html" class="botao">Learn More</a>
+        </div>
+
+        <div class="direita-sobre">
+            <iframe width="640" height="360" src="https://www.youtube.com/embed/666m6E4mqkc" frameborder="0"
+                allowfullscreen></iframe>
+        </div>
+    </section>
+
+    </div>
+
+    <section id="services" class="services-section">
+        <h2 style="color: #0056b3;"><strong>Nosso Cursos</strong></h2>
+
+        <a href="/cursos/IA-curso/index.html" style="text-decoration: none;">
+            <div class="service-card">
+                <h3>IA Fundaments</h3>
+                <p>Quer entender como a IA está moldando o futuro? No nosso curso de IA Fundamentals, você vai aprender
+                    os conceitos básicos, aplicações práticas e as tendências que estão revolucionando o mercado!</p>
+            </div>
+        </a>
+
+        <a href="/cursos/DATA-curso/index.html" style="text-decoration: none;">
+            <div class="service-card">
+                <h3>Data Science</h3>
+                <p>Quer dominar o futuro das análises? Nosso curso de Data Science é a chave! Aprenda a extrair insights
+                    valiosos, usar ferramentas poderosas e tomar decisões precisas.</p>
+            </div>
+        </a>
+
+        <a href="/cursos/CIBER-curso/index.html" style="text-decoration: none;">
+            <div class="service-card">
+                <h3>CiberSecurity</h3>
+                <p>Descubra estratégias práticas para manter seus dados seguros e evitar fraudes.
+                    Inscreva-se agora e torne-se um expert em segurança digital! Não fique vulnerável!</p>
+            </div>
+        </a>
+
+
+        <a href="/cursos/ANALYSIS-curso/index.html" style="text-decoration: none;">
+            <div class="service-card">
+                <h3>Analysis Sistems Developement</h3>
+                <p>Quer criar soluções que transformam negócios? No nosso curso de Análise e Desenvolvimento de
+                    Sistemas, você aprenderá a projetar, desenvolver e implementar sistemas eficazes!
+                    Inscreva-se agora e dê o próximo passo na sua carreira</p>
+            </div>
+        </a>
+
+        <a href="/cursos/AUDIOVISUAL-curso/index.html">
+            <div class="service-card">
+                <h3>AudioVisual</h3>
+                <p>Quer criar conteúdos audiovisuais impactantes? No nosso curso de Audiovisual, você aprenderá técnicas
+                    de
+                    filmagem, edição e storytelling que farão suas produções se destacarem!</p>
+            </div>
+        </a>
+
+        <a href="/cursos/GAMEDEV-curso/index.html">
+            <div class="service-card">
+                <h3>Game Developement</h3>
+                <p>Você sonha em criar seu próprio game? No nosso curso de Game Development, você aprenderá a programar,
+                    projetar e dar vida a mundos incríveis! Inscreva-se agora e comece sua jornada como desenvolvedor de
+                    jogos!</p>
+            </div>
+        </a>
+    </section>
+
+    <div class="devT" id="devT">
+        <h1>Se aprofundar em uma área e navegar em outras <strong style="font-size: 35px;">&lt;T&gt;</strong></h1>
+        <p class="subtitle">Profissionais em <strong>&lt;T&gt;</strong> têm profundidade de conhecimento
+            (especialistas)
+            em
+            uma determinada área, e ainda possuem conhecimento generalista em várias outras áreas.</p>
+        <p class="generalista">generalista_</p>
+        <p class="subtitle">Habilidade em navegar em diversas disciplinas</p>
+
+        <div class="disciplinas" id="disciplinas">
+            <div class="area area-others" data-area="UX">
+                <h3>UX</h3>
+            </div>
+            <div class="area area-others" data-area="Back-End">
+                <h3>Back-End</h3>
+            </div>
+            <div class="area area-central selected" data-area="Front-End">
+                <h3>Front-End</h3>
+            </div>
+            <div class="area area-others" data-area="DevOps">
+                <h3>DevOps</h3>
+            </div>
+            <div class="area area-others" data-area="Ciência de Dados">
+                <h3>Ciência de Dados</h3>
+            </div>
+        </div>
+
+        <h3 style="text-align: center; color: #ffffff; margin-top: 10vh;">Duvidas Frequentes_</h3>
+        <div class="faq">
+            <div class="question">
+                <span class="icon">+</span> 1. O que é dev em <strong>&lt;T&gt;</strong> ?
+            </div>
+            <div class="answer">Quem desenvolve em <strong style="color: #329bff;">&lt;T&gt;</strong> é a pessoa que
+                busca conhecimento além da sua área de
+                especialização. No início de carreira, se aprofunda em um tema, conhecendo pelo menos 2 níveis de
+                abstração, ou o “por baixo dos panos” e se sente confortável para executar os desafios que lhe são
+                propostos. Ao longo da carreira, procura navegar em temas próximos, do próprio time ou de áreas de
+                interface para entender melhor como seus colegas atuam e ampliar seu repertório pessoal, o que
+                ajudará na solução de problemas cada vez mais complexos.</div>
+
+            <div class="question">
+                <span class="icon">+</span> 2. Porque ser dev em <strong>&lt;T&gt;</strong> ?
+            </div>
+            <div class="answer">Antes de mais nada: não existe um caminho certo ou melhor de carreira. Porém,
+                acreditamos que profissionais em <strong style="color: #329bff;">&lt;T&gt;</strong> terão algumas
+                vantagens em um mercado de trabalho mais dinâmico, volátil e não-linear. Dentre elas, maior
+                autonomia
+                para tirar ideias do papel, um processo criativo mais afiado e, principalmente, uma grande
+                adaptabilidade às mudanças que possam ocorrer. E ainda por cima, também terá acesso a mais
+                oportunidades, uma vez que conhece e já navega por outras áreas.</div>
+
+            <div class="question">
+                <span class="icon">+</span> 3. Por onde começo meu <strong>&lt;T&gt;</strong>?
+            </div>
+            <div class="answer">Comece por algo prático, aplicável. Pode ser um novo framework de Front-End. Ou uma
+                linguagem da moda do Back-End. Aplique o que aprendeu em diferentes projetos, troque sua experiência
+                em
+                comunidades de devs e escolha se aprofundar onde mais tenha se identificado. Quando começar a se
+                aprofundar, comece a se perguntar qual o código por trás daquela biblioteca ou o que roda por trás
+                daquele framework. Com o tempo você vai precisar mergulhar um pouco mais... entender do sistema
+                operacional, de virtual machine, funcionamento do navegador. Mergulhe fundo nesse início para
+                construir
+                a barra vertical do seu <strong style="color: #329bff;">&lt;T&gt;</strong>, sua especialização.
+            </div>
+
+            <div class="question">
+                <span class="icon">+</span> 4. Devo buscar ampliar apenas meus conhecimentos técnicos?
+            </div>
+            <div class="answer">Os conhecimentos técnicos serão extremamente importantes no início de sua carreira.
+                Mas
+                com a evolução profissional, você precisará acessar outros conhecimentos como gestão, liderança,
+                comunicação, além de conhecer, pelo menos, como funcionam as outras áreas que terão interface com a
+                sua
+                entrega e de seu time. Esse conhecimento fora da sua especialização inclusive ajudará seu processo
+                criativo quando tiver que resolver problemas mais complexos.</div>
+
+            <div class="question">
+                <span class="icon">+</span> 5. Em quanto tempo tenho que formar o meu <strong>&lt;T&gt;</strong>?
+            </div>
+            <div class="answer">Calma, respira! A aprendizagem em tecnologia é um processo longo. Leva tempo. Não é
+                um
+                sprint de 100m rasos. Está mais para uma maratona. Talvez em 10 anos você domine a programação.
+                Então
+                não se preocupe com o tempo, mas sim com o quanto você se preparou e tem conhecimento suficiente
+                para
+                resolver os problemas do seu dia a dia do trabalho, conforme evolui na carreira.
+            </div>
+        </div>
+    </div>
+
+    <div class="podcast-section">
+
+
+        <div class="content">
+            <h1 style="text-align: right; color: #66b0fe;">inovA Cast</h1>
+
+            <p style="font-size: 1.2em;">A inovA também entrou no mundo dos podcasts com o seu programa
+                "Conexões
+                Inovadoras". Neste
+                espaço, a empresa explora tendências tecnológicas, empreendedorismo e inovações que moldam o futuro.
+                Com convidados especiais e discussões envolventes, o podcast busca informar e inspirar ouvintes
+                interessados em transformar suas ideias em realidade.</p>
+        </div>
+
+        <div class="carousel">
+            <div class="video-wrapper active">
+                <iframe width="880" height="500" src="https://www.youtube.com/embed/Oi3TO-cVr_k" frameborder="0"
+                    allowfullscreen></iframe>
+            </div>
+            <div class="video-wrapper">
+                <iframe width="880" height="500" src="https://www.youtube.com/embed/zp2yxoLTHRc" frameborder="0"
+                    allowfullscreen></iframe>
+            </div>
+            <div class="video-wrapper">
+                <iframe width="880" height="500" src="https://www.youtube.com/embed/666m6E4mqkc" frameborder="0"
+                    allowfullscreen></iframe>
+            </div>
+            <div class="bolinhass">
+                <div class="bolinhas active" data-index="0"></div>
+                <div class="bolinhas" data-index="1"></div>
+                <div class="bolinhas" data-index="2"></div>
+            </div>
+        </div>
+
+        <div class="float float1"></div>
+        <div class="float float2"></div>
+        <div class="float float3"></div>
+    </div>
+
+    <div class="table-prices">
+        <section class="card-preços" style="border: solid 1px #007BFF;">
+            <div id="header">
+                <h2 class="title">Beginner</h2>
+                <h1 class="price">R$100</h1>
+            </div>
+            <p class="desc">Ideal para quem está começando na tecnologia</p>
+            <ul class="lists">
+                <li class="list">
+                    <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path clip-rule="evenodd"
+                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                            fill-rule="evenodd"></path>
+                    </svg>
+                    <p>Acesso aos cursos</p>
+                </li>
+                <li class="list">
+                    <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path clip-rule="evenodd"
+                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                            fill-rule="evenodd"></path>
+                    </svg>
+                    <p>Suporte Personalizado</p>
+                </li>
+                <li class="list">
+                    <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path clip-rule="evenodd"
+                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                            fill-rule="evenodd"></path>
+                    </svg>
+                    <p>Descontos Futuros</p>
+                </li>
+            </ul>
+            <a href="/medium" class="action" style="text-decoration: none; color: inherit;"> Get
+                Started
+            </a>
+        </section>
+
+        <section class="card-preços" style="border: solid 1px #007BFF;">
+            <div id="header">
+                <h2 class="title" style="color: #ffffffc0;">Medium</h2>
+                <h1 class="price">R$125</h1>
+            </div>
+            <p class="desc">Recomendado para aqueles que querem estudar e evoluir</p>
+            <ul class="lists">
+                <li class="list">
+                    <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path clip-rule="evenodd"
+                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                            fill-rule="evenodd"></path>
+                    </svg>
+                    <p>Acesso aos cursos</p>
+                </li>
+                <li class="list">
+                    <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path clip-rule="evenodd"
+                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                            fill-rule="evenodd"></path>
+                    </svg>
+                    <p>Suporte Personalizado</p>
+                </li>
+                <li class="list">
+                    <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path clip-rule="evenodd"
+                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                            fill-rule="evenodd"></path>
+                    </svg>
+                    <p>Descontos Futuros</p>
+                </li>
+                <li class="list">
+                    <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path clip-rule="evenodd"
+                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                            fill-rule="evenodd"></path>
+                    </svg>
+                    <p>Networking com Especialistas</p>
+                </li>
+                <li class="list">
+                    <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path clip-rule="evenodd"
+                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                            fill-rule="evenodd"></path>
+                    </svg>
+                    <p>Acompanhamento de Desempenho</p>
+                </li>
+            </ul>
+            <a href="/begginer" class="action" style="color: inherit; text-decoration: none;"> Get
+                Started </a>
+        </section>
+
+        <section class="card-preços card-dev" style="border: solid 1px #007BFF;">
+            <div id="header">
+                <h2 class="title" style="color: #007bff;">Dev_</h2>
+                <h1 class="price" style="color: #ffffff;" id="texto-bom">R$150</h1>
+            </div>
+            <p class="desc">Plano ideal para quem realmente deseja se tornar um desenolvedor em qualquer área</p>
+            <ul class="lists">
+                <li class="list">
+                    <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path clip-rule="evenodd"
+                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                            fill-rule="evenodd"></path>
+                    </svg>
+                    <p>Acesso aos cursos</p>
+                </li>
+                <li class="list">
+                    <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path clip-rule="evenodd"
+                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                            fill-rule="evenodd"></path>
+                    </svg>
+                    <p>Suporte Personalizado</p>
+                </li>
+                <li class="list">
+                    <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path clip-rule="evenodd"
+                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                            fill-rule="evenodd"></path>
+                    </svg>
+                    <p>Descontos Futuros</p>
+                </li>
+                <li class="list">
+                    <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path clip-rule="evenodd"
+                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                            fill-rule="evenodd"></path>
+                    </svg>
+                    <p>Networking com Especialistas</p>
+                </li>
+                <li class="list">
+                    <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path clip-rule="evenodd"
+                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                            fill-rule="evenodd"></path>
+                    </svg>
+                    <p>Acompanhamento de Desempenho</p>
+                </li>
+                <li class="list">
+                    <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path clip-rule="evenodd"
+                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                            fill-rule="evenodd"></path>
+                    </svg>
+                    <p>Certificação Reconhecida</p>
+                </li>
+                <li class="list">
+                    <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path clip-rule="evenodd"
+                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                            fill-rule="evenodd"></path>
+                    </svg>
+                    <p>Acesso a inovA Linguas</p>
+                </li>
+            </ul>
+            <a class="action" href="/dev" style="text-decoration: none; color: inherit;">Get
+                Started</a>
+        </section>
+    </div>
+
+    <div class="container-discord" id="discord">
+        <div class="left">
+            <div class="widget">
+                <iframe src="https://discord.com/widget?id=1295367716802134127&theme=dark" width="350" height="500"
+                    allowtransparency="true" frameborder="0"
+                    sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+            </div>
+        </div>
+
+        <div class="right">
+            <h1 class="title-discord">Nosso Servidor Do Discord</h1>
+            <p class="description">
+                Bem-vindo ao nosso servidor! Aqui você vai encontrar uma comunidade ativa e amigável,
+                com canais para diversos interesses, jogos, bate-papo e muito mais. Junte-se a nós e faça
+                novas amizades, participe de eventos e aproveite tudo o que temos a oferecer!
+            </p>
+            <div class="invite-card">
+                <a href="https://discord.gg/BZRRaTsYWw" target="_blank">
+                    <img src="/assets/convite-discord.png" alt="Convite Discord" class="invite-image">
+                    <div class="invite-overlay">
+                        <h2>Clique para entrar no servidor!</h2>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <img src="/assets/chatBot-icon.gif" alt="Chat Icon" class="toggle-image" onclick="toggleChat()">
+
+    <div class="chatbot" id="chatbot">
+        <h2 style="color: #ffffff; background-color: #4392e699;">Chatbot</h2>
+        <div class="options">
+            <button class="option-button" onclick="showResponse('Como funciona?')">Como funciona?</button>
+            <button class="option-button" onclick="showResponse('Quais os serviços oferecidos?')">Quais os
+                serviços
+                oferecidos?</button>
+            <button class="option-button" onclick="showResponse('Qual o horário de atendimento?')">Qual o
+                horário de
+                atendimento?</button>
+            <button class="option-button" onclick="showResponse('Como posso entrar em contato?')">Como posso
+                entrar em
+                contato?</button>
+            <button class="option-button" onclick="showResponse('Tem alguma promoção?')">Tem alguma
+                promoção?</button>
+            <button class="option-button" onclick="showResponse('Fale sobre a empresa.')">Fale sobre a
+                empresa.</button>
+            <button class="option-button" onclick="showResponse('o que é Bcorp')">O que é uma
+                B-corp?</button>
+            <button class="option-button" onclick="showResponse('Porque somos uma B-corp')">Porque a inovA é uma
+                B-corp?</button>
+        </div>
+        <div class="loading" id="loading" style="display: none;">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+        <div id="response" class="response"></div>
+    </div>
+
+    <section class="section-footer">
+        <footer class="top" id="footer">
+            <img src="/assets/B-corp_logo.png" style="width: 17%; border-radius: 0%;" />
+            <div class="links">
+                <div>
+                    <a href="#home" class="Footer_links">Home</a>
+                    <a href="#about" class="Footer_links">Sobre nós</a>
+                    <a href="#services" class="Footer_links">Nossos cursos</a>
+                    <a href="#devT" class="Footer_links">Dev &lt;T&gt;</a>
+                    <a href="#podcast" class="Footer_links">inovACast</a>
+                </div>
+                <div>
+                    <a href="#discord" class="Footer_links">Duvidas frequentes</a>
+                    <a href="#comprar_cusos" class="Footer_links">Plano Begginer</a>
+                    <a href="#" class="Footer_links">Plano Medium</a>
+                    <a href="#" class="Footer_links">Plano Dev_</a>
+                </div>
+            </div>
+        </footer>
+        <footer class="bottom">
+            <div class="legal">
+                <span> © 2024 All rights reserved </span>
+                <a> License </a>
+                <a> Terms </a>
+                <a> Privacy </a>
+            </div>
+        </footer>
+    </section>
+    <script src="/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

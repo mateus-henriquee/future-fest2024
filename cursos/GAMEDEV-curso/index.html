@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/cursos/ANALYSIS-curso/style.css">
+    <link rel="stylesheet" href="/">
+    <title>IA</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <strong>
+                <h3>inovA</h3>
+            </strong>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#services">Serviços</a></li>
+                <li><a href="#contact">Contatos</a></li>
+                <li><a href="/account">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <div class="container">
+            <div class="video">
+                <video controls>
+                    <source src="seu-video.mp4" type="video/mp4">
+                    Seu navegador não suporta vídeo.
+                </video>
+                <h1 style="color: #fff;"> Curso Desenvolvimento de jogos </h1>
+                <p style="color: #fff;">
+                    Quer entrar no desenvolvimento de jogos? Neste curso rápido, você aprenderá os conceitos essenciais
+                    e as ferramentas para criar seus próprios jogos. Transforme suas ideias em experiências interativas!
+                </p>
+
+                <div class="material-curso">
+                    <h2 style="color: #fffefe;"> ↓ MATERIAL DO CURSO ↓ </h2>
+                    <a href="/cursos/CIBER-curso/material/inovA-senhas.zip" class="botao" download>
+                        <button class="download-button">Baixar Arquivo</button> </a>
+                </div>
+            </div>
+            <div class="comments">
+                <h2 style="color: #0d6efd;">Comentários</h2>
+                <div class="comment-box" id="commentBox" style="color: #fff;">
+                    <!-- Comentários serão carregados aqui -->
+                </div>
+                <input type="text" id="commentInput" placeholder="Escreva um comentário..." class="comment-input">
+                <button id="submitComment">Enviar</button>
+            </div>
+        </div>
+        </div>
+
+        <script src="/cursos/IA-curso/script.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                // Carregar comentários ao carregar a página
+                fetch('/comments')
+                    .then(response => response.json())
+                    .then(comments => {
+                        const commentBox = document.getElementById('commentBox');
+
+                        comments.forEach(comment => {
+                            const newComment = document.createElement('p');
+                            newComment.innerHTML = `<span class="comment-author">Usuário:</span> <span class="comment-message">${comment}</span>`;
+                            commentBox.appendChild(newComment);
+                        });
+                    })
+                    .catch(error => {
+                        console.error('Erro ao carregar comentários:', error);
+                    });
+
+                // Adicionar novo comentário
+                document.getElementById('submitComment').addEventListener('click', function () {
+                    const commentInput = document.getElementById('commentInput');
+                    const comment = commentInput.value;
+
+                    if (!comment) {
+                        alert("Por favor, escreva um comentário.");
+                        return;
+                    }
+
+                    const commentBox = document.getElementById('commentBox');
+                    const newComment = document.createElement('p');
+                    newComment.innerHTML = `<span class="comment-author">Você:</span> <span class="comment-message">${comment}</span>`;
+                    commentBox.appendChild(newComment);
+
+                    // Limpa o campo após enviar
+                    commentInput.value = '';
+
+                    // Enviar o comentário para o servidor
+                    fetch('/comment', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({ comment }),
+                    })
+                        .then(response => response.text())
+                        .then(data => {
+                            console.log(data);
+                        })
+                        .catch((error) => {
+                            console.error('Erro:', error);
+                        });
+                });
+            });
+
+        </script>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    height: 100%;
+    overflow: hidden;
+}
+
+.logo {
+    margin-left:3vh;
+    color: #215ff1;
+}
+
+header {
+    background: #1a1a1a;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    margin-top: 0;
+    display: flex;
+    justify-content: space-between;
+    position: static;
+    width: 100%;
+    box-shadow: rgb(0, 0, 0) 0px 20px 40px -5px;
+}
+
+main {
+    background-color: #333; 
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: #0d6efd;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.video {
+    flex: 2; /* Aumenta a área do vídeo */
+    padding: 20px;
+}
+
+video {
+    width: 100%; /* Largura total do contêiner */
+    height: auto;
+    border: 1px solid #444;
+}
+
+.comments {
+    flex: 1; /* Área de comentários */
+    background-color: #282828;
+    padding: 20px;
+    overflow-y: auto; /* Permite rolagem se os comentários forem muitos */
+}
+
+.comment-box {
+    max-height: 70vh; /* Limita a altura dos comentários */
+    overflow-y: auto; /* Permite rolagem */
+}
+
+.comment-input {
+    width: calc(100% - 100px); /* Ajusta a largura do campo de entrada */
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #444;
+    background-color: #333;
+    color: #fff;
+}
+
+.comment-author {
+    color: #ffffff48; 
+    font-weight: bold;
+}
+
+button {
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #086bff; /* Cor do botão */
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1c76fe; /* Cor do botão ao passar o mouse */
+}
+
+.material-curso {
+    margin-top: 2%;
+}
+
+.download-button {
+    background-color: transparent;
+    color: #fff;
+}
+
+.download-button:hover {
+    background-color: transparent;
+    color: #0d6efd;
+}
+
+.botao {
+    background: #0d6efd;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    color: #0d6efd;
+}
+
+.botao:hover {
+    background: transparent;
+    transition: all 0.7s;
+    border: #0d6efd solid 3px;
+    color: #0d6efd;
+}

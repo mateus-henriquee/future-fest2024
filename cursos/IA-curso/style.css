@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    height: 100%;
+    overflow: hidden;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(360deg, rgb(3, 38, 142) 0%, rgba(9, 9, 121, 1) 35%, rgb(20, 64, 223) 87%);
+}
+
+
+
+#logo {
+    width: 10%;
+    margin-right: 85%;
+    height: 80%;
+    border-radius: 0%;
+}
+
+#logo:hover {
+    transition: all 0.5s;
+    transform: scale(1.1);
+}
+
+header {
+    background: #3333338d;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    margin-top: 0%;
+    display: flex;
+    justify-content: space-between;
+    position:static;
+    width: 100% ;
+    box-shadow: rgb(0, 0, 0) 0px 20px 30px -10px;
+}
+
+h1 {
+    font-size: 20px;
+}
+
+p {
+    font-size: 12px;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: rgb(56, 123, 246);
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.video {
+    flex: 2; /* Aumenta a área do vídeo */
+    padding: 20px;
+}
+
+video {
+    width: 100%; /* Largura total do contêiner */
+    height: auto;
+    border: 1px solid #444;
+}
+
+.comments {
+    flex: 1; /* Área de comentários */
+    background-color: #282828;
+    padding: 20px;
+    overflow-y: auto; /* Permite rolagem se os comentários forem muitos */
+}
+
+.comment-box {
+    max-height: 70vh; /* Limita a altura dos comentários */
+    overflow-y: auto; /* Permite rolagem */
+}
+
+.comment-input {
+    width: calc(100% - 100px); /* Ajusta a largura do campo de entrada */
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #444;
+    background-color: #333;
+    color: #fff;
+}
+
+button {
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #6441a5; /* Cor do botão */
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #7a4cbd; /* Cor do botão ao passar o mouse */
+}
+
+.material-curso {
+    margin-top: 2%;
+}
+
+.download-button {
+    background-color: transparent;
+    color: #fff;
+}
+
+.download-button:hover {
+    background-color: transparent;
+    color: #f31264;
+}
+
+.botao {
+    background: #f31264;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    color: #f31264;
+}
+
+.botao:hover {
+    background: transparent;
+    transition: all 1s;
+    border: #f31264 solid 3px;
+    color: #f31264;
+}
