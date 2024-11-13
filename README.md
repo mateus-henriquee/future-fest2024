@@ -52,6 +52,7 @@ Clone o repositório e instale as dependências:
 git clone https://github.com/mateus-henriquee/future-fest2024
 cd future-fest2024
 npm install
+npm install mondodb
 ```
  
 ### 3. **Rodando o Projeto**
@@ -59,7 +60,7 @@ npm install
 Execute o servidor com o seguinte comando:
  
 ```bash
-npm start
+node server.js
 ```
  
 A API estará disponível em `http://localhost:3000`.
