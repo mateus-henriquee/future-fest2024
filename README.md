@@ -50,7 +50,7 @@ Clone o repositório e instale as dependências:
  
 ```bash
 git clone https://github.com/mateus-henriquee/future-fest2024
-cd inova-api
+cd future-fest2024
 npm install
 ```
  
