@@ -569,6 +569,11 @@ footer a:hover {
   align-items: center;
 }
 
+.content p {
+  margin-bottom: 6em;
+  width: 100%;
+}
+
 .content h1 {
   text-align: center;
   margin-right: 35%;
