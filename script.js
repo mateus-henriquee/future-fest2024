@@ -161,4 +161,48 @@ function toggleMenu() {
     menu.classList.toggle('active');
 }
 
-// NODE
+// CARROSSEL INSTITUTO
+const images = ["/assets/image1.jpg", "/assets/image2.jpg"]; // Somente duas imagens
+let nextIndex = 1; // Posição do próximo índice
+let direction = 'left'; // Direção inicial da animação (da esquerda para a direita)
+
+const photoElement = document.getElementById("photo");
+const imageWrapper = document.querySelector(".image-wrapper");
+
+function changeImage() {
+    // Atualiza o índice da imagem atual e do próximo
+    currentIndex = nextIndex;
+    nextIndex = (nextIndex + 1) % images.length; // Alterna entre 0 e 1
+
+    // Verifica a direção da animação
+    if (direction === 'left') {
+        imageWrapper.style.transform = "translateX(100%)"; // Move para a esquerda
+        direction = 'right'; // Troca a direção para direita
+    } else {
+        imageWrapper.style.transform = "translateX(-100%)"; // Move para a direita
+        direction = 'left'; // Troca a direção para esquerda
+    }
+
+    // Troca a imagem após a animação
+    setTimeout(() => {
+        photoElement.src = images[currentIndex]; // Atualiza a imagem
+        imageWrapper.style.transition = 'none'; // Remove a transição enquanto a imagem é trocada
+        imageWrapper.style.transform = "translateX(0)"; // Reseta a posição para o início da animação
+        setTimeout(() => {
+            imageWrapper.style.transition = 'transform 1s ease-in-out'; // Retorna a transição
+        }, 50); // Pequeno delay para garantir que o reset de transição aconteça após a atualização da imagem
+    }, 1000); // Tempo de espera para a animação da troca da imagem
+}
+
+// Troca de foto a cada 4 segundos
+let imageInterval = setInterval(changeImage, 4000);
+
+// Interrompe a troca de imagens quando o mouse passar sobre a imagem
+imageWrapper.addEventListener('mouseenter', () => {
+    clearInterval(imageInterval);
+});
+
+// Retoma a troca de imagens quando o mouse sair da imagem
+imageWrapper.addEventListener('mouseleave', () => {
+    imageInterval = setInterval(changeImage, 4000);
+});
