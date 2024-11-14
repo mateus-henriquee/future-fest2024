@@ -82,7 +82,7 @@ nav {
 }
 
 .video {
-    flex: 2; /* Aumenta a área do vídeo */
+    flex: 1; /* Aumenta a área do vídeo */
     padding: 20px;
 }
 
