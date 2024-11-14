@@ -42,26 +42,17 @@ function showResponse(option) {
             case 'Como funciona?':
                 response = 'Nosso serviço funciona através de uma plataforma online que conecta você aos nossos colaboradores. ';
                 break;
-            case 'Quais os serviços oferecidos?':
-                response = 'Oferecemos diversos cursos online como: \n • IA Adaptation; \n • Data Science; \n • Team Management; \n além de nossa Inteligencia Artificial altamente focada e treinada para responder qualquer resposta relacionada a tecnologia';
-                break;
-            case 'Qual o horário de atendimento?':
-                response = 'Nossos cursos são totalmente online e gravados então nosso horario de funcionamento é de 24h';
-                break;
             case 'Como posso entrar em contato?':
-                response = 'Você pode entrar em contato conosco pelo e-mail contato@empresa.com ou preenchendo o formulario mais abaixo';
-                break;
-            case 'Tem alguma promoção?':
-                response = 'Com a primeira assinatura você terá um desconto de 10% independente da escolha de seu plano';
+                response = 'Você pode entrar em contato conosco pelo nosso servidor do discord mais abaixo!';
                 break;
             case 'Fale sobre a empresa.':
                 response = 'Somos uma empresa dedicada a oferecer soluções inovadoras e desenvolver profissionais para o mercado de trabalho.';
                 break;
             case 'o que é Bcorp':
-                response = 'B-corp é uma certificação concedida às empresas comerciais que atendem a requisitos sociais e ambientais, governança e transparência em relação o público.';
+                response = 'B-corp é uma certificação concedida às empresas comerciais que atendem a requisitos sociais e ambientais.';
                 break;
             case 'Porque somos uma B-corp':
-                response = 'Nós desempenhamos um grande desempenho social, doando 15% de nossos lucros para a comunidade, alêm de compensarmos a emissão de carbono gerada por cada acesso do site.';
+                response = 'Somos uma empresa B-Corp pois a cada 10 cursos comprados doamos 2 cursos para nossa instituição de pessoas sem acesso a bons estudos';
                 break;
             default:
                 response = 'Desculpe, não entendi a sua pergunta.';
