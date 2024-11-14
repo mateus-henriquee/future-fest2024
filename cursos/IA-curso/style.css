@@ -15,18 +15,6 @@ body {
 
 
 
-#logo {
-    width: 10%;
-    margin-right: 85%;
-    height: 80%;
-    border-radius: 0%;
-}
-
-#logo:hover {
-    transition: all 0.5s;
-    transform: scale(1.1);
-}
-
 header {
     background: #3333338d;
     color: white;

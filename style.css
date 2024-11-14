@@ -10,6 +10,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    transition: all 0.3s ease-in-out;
 }
 
 body {
@@ -769,7 +770,7 @@ h1 {
   opacity: 0;
   height: 0;
   overflow: hidden;
-  transition: opacity 0.3s ease, height 0.3s ease;
+  transition: opacity 1s ease, height 1s ease;
 }
 
 .answer.show {
