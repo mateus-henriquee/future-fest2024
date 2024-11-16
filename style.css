@@ -425,6 +425,7 @@ background: linear-gradient(0deg, rgba(24,24,25,1) 0%, rgba(0,0,0,1) 100%);
 }
 
 .direita, img {
+  width: 75%;
     border-radius: 0%;
 }
 
