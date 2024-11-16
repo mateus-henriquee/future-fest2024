@@ -60,6 +60,7 @@ body {
   right: 4vh;
   margin: 10px;
   transition: subirDescer 2s infinite;
+  border-radius: 50%;
 }
 
 .chatbot {
@@ -74,6 +75,7 @@ body {
   right: -100%;
   bottom: 17vh;
   transition: right 0.5s ease;
+  border-radius: 2%;
 }
 
 .chatbot.open {
@@ -423,7 +425,7 @@ background: linear-gradient(0deg, rgba(24,24,25,1) 0%, rgba(0,0,0,1) 100%);
 }
 
 .direita, img {
-    border-radius: 100%;
+    border-radius: 0%;
 }
 
 .direita-sobre {
@@ -434,7 +436,7 @@ background: linear-gradient(0deg, rgba(24,24,25,1) 0%, rgba(0,0,0,1) 100%);
 .direita-sobre img:hover {
   transition: all linear 0.3s;
   transform: scale(1.1);
-  border-radius: 1%;
+  border-radius: 2%;
   box-shadow: rgb(26, 136, 253) 0px 20px 30px -10px;
 }
 
@@ -571,7 +573,7 @@ footer a:hover {
 }
 
 .content p {
-  margin-bottom: 6em;
+  margin-bottom: 9em;
   width: 100%;
 }
 
